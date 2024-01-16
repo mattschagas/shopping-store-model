@@ -1,0 +1,152 @@
+:root{
+    --pallete-primary-color: #1a0f79; /* 30% */
+    --pallete-secondary-color: #060243; /* 60% */
+    --pallete-tertiary-color: #e0f8f8; /* 10% */
+    --pallete-quaternary-color: #831bea;
+    --pallete-quintenary-color: #ff0066;
+    --ccor: rgba(0, 0, 0, 0);
+}
+
+.header{
+    background-color: var(--pallete-secondary-color);
+}
+
+.txt-primary{
+    color: var(--pallete-primary-color);
+}
+
+.txt-secondary{
+    color: var(--pallete-secondary-color);
+}
+
+.txt-quat{
+    color: var(--pallete-quaternary-color);
+}
+
+.txt-quint{
+    color: var(--pallete-quintenary-color);
+}
+
+.txt-muted{
+    filter: brightness(0.65);
+}
+
+.txt-selected{
+    filter: brightness(1.2);
+}
+
+.txt-bold{
+    font-weight: bold;
+}
+
+.bg-cprimary{
+    background-color: var(--pallete-primary-color);
+}
+
+.bg-csecondary{
+    background-color: var(--pallete-secondary-color);
+}
+
+.bg-ctertiary{
+    background-color: var(--pallete-tertiary-color);
+}
+
+.bg-cquaternary{
+    background-color: var(--pallete-quaternary-color);
+}
+
+.bg-cquintenary{
+    background-color: var(--pallete-quintenary-color);
+}
+
+.personalizedInput1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-block: 2.5em;
+}
+
+.personalizedInput1 label{
+    position: absolute;
+    margin-left: 1.5em;
+}
+
+.personalizedInput1 input:focus + label, .personalizedInput1 input:not(:placeholder-shown) + label{
+    margin-bottom: 5em;
+}
+
+.personalizedInput1 input, .personalizedInput1 input:focus{
+    background-color: var(--ccor) !important;
+    border: none;
+    border-bottom: solid 0.2em var(--pallete-quintenary-color);
+    border-radius: 0;
+    color: var(--pallete-quintenary-color) !important;
+}
+
+.personalizedInput1 label{
+    color: var(--pallete-quintenary-color);
+}
+
+.personalizedInput2 input, .personalizedInput2 input:focus, .personalizedInput2 textarea, .personalizedInput2 textarea:focus{
+    background-color: var(--ccor) !important;
+    border: 0.2em solid;
+    color: var(--pallete-quintenary-color) !important;
+    border-color: var(--pallete-quintenary-color);
+}
+
+.personalizedInput2 label{
+    color: var(--pallete-quintenary-color);
+}
+
+.personalizedInput2 input::placeholder, .personalizedInput2 textarea::placeholder{
+    color: var(--pallete-quintenary-color);
+    filter: brightness(0.8);
+}
+
+.personalizedForm1{
+    width: 50%;
+    min-width: 350px;
+    border: solid 0.2em var(--pallete-quintenary-color);
+    border-radius: 0.75em;
+}
+
+.personalizedForm1 button, .personalizedForm1 button:hover{
+    border: 0.2em solid var(--pallete-quintenary-color);
+    color: var(--pallete-quintenary-color);
+    background-color: var(--ccor);
+    border-radius: 0.5em;
+    padding: 0.75em;
+    width: 100%;
+}
+
+.personalizedForm1 button:hover{
+    background-color: var(--pallete-quintenary-color) !important;
+    box-shadow: -25vw 0 0 0 inset var(--pallete-quintenary-color), 25vw 0 0 0 inset var(--pallete-quintenary-color), -50vw 0 0 0 inset var(--pallete-quaternary-color), 50vw 0 0 0 inset var(--pallete-quaternary-color) !important;
+    color: var(--pallete-primary-color);
+}
+
+.personalizedFormHeader1{
+    display: inline-block;
+    padding: 1em 1em;
+    border-radius: 0.25em;
+    background-color: var(--pallete-quintenary-color);
+    color: var(--pallete-primary-color);
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.herodiv{
+    background-color: rgba(20, 20, 20, 0.29);
+    max-width: 80%;
+}
+
+
+.checkoutProcess{
+    --load: 60%;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to right, rgb(94, 148, 250) 0%, rgb(94, 148, 250) var(--load), gray var(--load), gray 100%);
+    mask: url("../imgs/process.png") no-repeat center;
+    mask-size: contain;
+}

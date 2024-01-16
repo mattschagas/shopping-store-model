@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title> Loja Web | Seu Produto Aqui </title>
+        <link rel="canonical" href="https://www.your_url.com/">
+        <link rel="icon" href="./static/imgs/caminho-para-seu-favicon.ico" type="image/x-icon">
+        <!-- Social Metatags -->
+        <meta name="description" content="Breve descrição da sua página">
+        <meta property="og:title" content="Título da Sua Página">
+        <meta property="og:description" content="Breve descrição da sua página">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="URL-da-Sua-Página">
+        <meta property="og:image" content="URL-da-Imagem">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Título da Sua Página">
+        <meta name="twitter:description" content="Breve descrição da sua página">
+        <meta name="twitter:image" content="URL-da-Imagem">
+        <meta name="google-site-verification" content="Suas Credenciais Aqui">
+        <meta name="theme-color" content="#your-themecolor">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="../static/css/animations.css">
+        <link rel="stylesheet" href="../static/css/stylesheet.css">
+        <link rel="stylesheet" href="../static/css/normalize.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <!-- 
+            EXISTEM OUTRAS TAGS PARA INSERIR, COMO PIXEL(DO FACEBOOK), O ANALYTICS(DO GOOGLE), E ENTRE OUTRAS, MAS NECESSITA QUE O CLIENTE JÁ TENHA UMA CONTA EM UM DOS DOIS PARA ESTARMOS INTEGRANDO ESSAS API's AO SITE, ALÉM DO SITE JÁ TER SIDO LANÇADO.
+        -->
+        <script src="https://kit.fontawesome.com/1959ade8c4.js" crossorigin="anonymous"></script>
+    </head>
+    <body> 
+        <main>
+            <div class="fixed-top min-vh-100 min-vw-100 collapse" style="background-color: rgba(0,0,0, 0.5);" id="insertCupom">
+                <form action="./checkout.html" class="position-absolute start-50 top-50 translate-middle bg-light d-inline-flex flex-column p-3 rounded" style="min-width: 300px;">
+                    <a data-bs-toggle="collapse" href="#insertCupom" class="text-danger position-absolute top-0 end-0 translate-middle-x text-decoration-none"><b>x</b></a>
+                    <h3 class="mx-2 text-nowrap">Insira o código do cupom</h3>
+                    <input class="form-control mt-2" type="text" name="" id="" placeholder="Ex.: A91!FG40X#S3">
+                    <button class="btn btn-lg btn-primary mt-3" type="submit">Inserir Cupom</button>
+                </form>
+            </div>
+            <div class="overflow-hidden d-flex justify-content-center align-items-center" style="height: 35vh;">
+                <img src="../static/imgs/unsplash-1.jpg" alt="" class="img-fluid min-vh-100 object-fit-cover">
+            </div>
+            <div class="min-vh-100 w-100 overflow-hidden bg-secondary py-3 d-flex">
+                <div class="d-block d-lg-flex flex-row-reverse mx-auto overflow-hidden" style="height: fit-content">
+                    <div class="rounded bg-light mx-2 p-2 d-flex flex-column" style="min-width: 300px;">
+                        <table>
+                            <tr>
+                                <th class="display-6">Carrinho</th>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <div>
+                                <tr>
+                                    <th>Produto 1</th>
+                                    <td>R$ 123,45</td>
+                                </tr>
+                                <tr>
+                                    <th>Produto 2</th>
+                                    <td>R$ 567,89</td>
+                                </tr>
+                            </div>
+                            <div>
+                                <tr>
+                                    <th>Subtotal</th>
+                                    <td>R$ 691,34</td>
+                                </tr>
+                                <tr>
+                                    <th>Juros</th>
+                                    <td>R$ 00,00</td>
+                                </tr>
+                                <tr>
+                                    <th>Frete</th>
+                                    <td>R$5,00</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-danger">Desconto</th>
+                                    <td class="text-danger">- R$200,00</td>
+                                </tr>
+                            </div>
+                            <tr>
+                                <th class="lead">Preço Final</th>
+                                <td class="lead">R$ 496,34</td>
+                            </tr>
+                        </table>
+                        <a href="#insertCupom" data-bs-toggle="collapse" role="button" aria-expanded="false" class="mx-auto my-3"><button class="btn btn-primary">Inserir Cupom de Desconto</button></a>
+                    </div>
+                    <span class="d-flex d-lg-none p-2"></span>
+                    <div class="bg-light mx-2 p-3 rounded d-inline-flex flex-column" style="max-width: 800px;">
+                        <div class="d-flex flex-column w-25 mx-auto" style="min-width: 300px;">
+                            <div class="checkoutProcess">
+                            </div>
+                            <ul class="d-flex flex-row justify-content-between p-0">
+                                <li class="list-unstyled">Pedido</li>
+                                <li class="list-unstyled">Pagamento</li>
+                                <li class="list-unstyled">Entrega</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <form action="" id="myForm">
+                                <div> <!-- Dados do Usuário -->
+                                    <h3>Dados do Usuário</h3>
+                                    <div class="input-group my-2 mx-auto">
+                                        <label for="" class="input-group-text">Nome Completo:</label>
+                                        <input type="text" name="" id="" class="form-control" required>
+                                    </div>
+                                    <div class="d-md-flex flex-row align-items-center">
+                                        <div class="input-group my-2 mx-auto">
+                                            <label for="" class="input-group-text">Email:</label>
+                                            <input type="text" name="" id="" class="form-control" required>
+                                            <label for="" class="input-group-text">@gmail.com</label>
+                                        </div>
+                                        <span class="d-none d-sm-flex px-2"></span>
+                                        <div class="input-group my-2 mx-auto">
+                                            <label for="" class="input-group-text">Celular:</label>
+                                            <input type="text" name="" id="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="d-sm-flex flex-row my-2">
+                                        <div class="input-group">
+                                            <label for="" class="input-group-text">Endereço</label>
+                                            <input type="text" name="" id="" class="form-control">
+                                        </div>
+                                        <span class="px-2 d-none d-sm-flex"></span>
+                                        <div class="d-none d-sm-flex input-group w-25" style="min-width: 10em;">
+                                            <label for="" class="input-group-text">Cep</label>
+                                            <input type="text" name="" id="" class="form-control" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="d-flex flex-column"> <!-- Dados de Pagamento --> 
+                                    <h3>Pagamento</h3>
+                                    <div>
+                                        <label for="">Método de pagamento:</label>
+                                        <ul class="nav">
+                                            <li class="nav-item mx-2"><input type="radio" name="paymentmethod" id="" value="pix" checked><label for="" class="mx-2">Pix</label></li>
+                                            <li class="nav-item mx-2"><input type="radio" name="paymentmethod" id="" value="credit"><label for="" class="mx-2">Crédito</label></li>
+                                            <li class="nav-item mx-2"><input type="radio" name="paymentmethod" id="" value="debit"><label for="" class="mx-2">Débito</label></li>
+                                            <li class="nav-item mx-2"><input type="radio" name="paymentmethod" id="" value="bank"><label for="" class="mx-2">Boleto</label></li>
+                                        </ul>
+                                    </div>
+                                    <div class="d-inline-flex flex-column payment-div" id="pix">
+                                        <hr>
+                                        <div class="d-sm-inline-flex flex-row justify-content-center">
+                                            <div>
+                                                <h3>Escaneie o QRCODE</h3>
+                                                <p class="text-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias a eaque quisquam cupiditate, aliquid ex sed nemo reiciendis non, nostrum ut aperiam, quae placeat. Minus fugit beatae amet ratione ad?</p>
+                                            </div>
+                                            <span class="d-none d-sm-flex p-5"></span>
+                                            <div class="d-flex mx-auto" style="min-width: 300px;">
+                                                <img src="../static/imgs/qrcode.png" alt="" class="img-fluid mx-auto">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-inline-flex flex-column payment-div" id="credit">
+                                        <hr>
+                                        <div class="input-group my-2 mx-auto">
+                                            <label for="" class="input-group-text">Nome do Titular no Cartão: </label>
+                                            <input type="text" name="" id="titular" class="form-control">
+                                        </div>
+                                        <div class="d-md-flex flex-row align-items-center">
+                                            <div class="input-group my-2 mx-auto">
+                                                <label for="" class="input-group-text">Número do Cartão</label>
+                                                <input type="text" name="" id="cartaonum" class="form-control">
+                                            </div>
+                                            <span class="d-none d-sm-flex p-2"></span>
+                                            <div class="input-group my-2 mx-auto">
+                                                <label for="" class="input-group-text">CVC</label>
+                                                <input type="text" name="" id="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="input-group my-2 mx-auto">
+                                            <label for="" class="input-group-text">Parcelar</label>
+                                            <select name="" id="" class="form-control">
+                                                <option value="">1x R$496,34</option>
+                                                <option value="">2x R$250,00</option>
+                                            </select>
+                                            <label for="" class="input-group-text">
+                                                <i class="fa-solid fa-caret-down"></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="d-inline-flex flex-column payment-div" id="debit">
+                                        <hr>
+                                        <div class="input-group my-2 mx-auto">
+                                            <label for="" class="input-group-text">Nome do Titular no Cartão: </label>
+                                            <input type="text" name="" id="titular" class="form-control">
+                                        </div>
+                                        <div class="d-md-flex flex-row align-items-center">
+                                            <div class="input-group my-2 mx-auto">
+                                                <label for="" class="input-group-text">Número do Cartão</label>
+                                                <input type="text" name="" id="cartaonum" class="form-control">
+                                            </div>
+                                            <span class="d-none d-sm-flex p-2"></span>
+                                            <div class="input-group my-2 mx-auto">
+                                                <label for="" class="input-group-text">CVC</label>
+                                                <input type="text" name="" id="" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-inline-flex flex-column payment-div" id="bank">
+                                        <hr>
+                                        <p class="text-center align-items-center w-100">A compra será concluida assim que obtermos a confirmação de que o boleto foi pago.</p>
+                                        <a href="../static/downloadable/Impressão-de-Boletos-MODELO.pdf" class="btn btn-lg btn-primary mx-auto w-75 text-center align-items-center" download>
+                                            Gerar Boleto
+                                            <!-- <button class="btn btn-lg btn-primary w-75">Gerar Boleto</button> -->
+                                        </a>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="w-100 d-flex flex-nowrap my-2">
+                                        <input type="checkbox" name="sharePrivacy" id="sharePrivacy">
+                                        <label for="sharePrivacy" class="mx-2">Concordo com a <a href="">Política de Privacidade</a> de <a href="">&copy; Empresa</a>.</label>
+                                    </div>
+                                    <div class="w-100 d-flex flex-nowrap my-2">
+                                        <input type="checkbox" name="shareService" id="shareService">
+                                        <label for="shareService" class="mx-2">Concordo com os <a href="">Termos de Serviço</a> de <a href="">&copy; Empresa</a>.</label>
+                                    </div>
+                                    <div class="w-100 d-flex flex-nowrap my-2">
+                                        <input type="checkbox" name="shareNewsletter" id="shareNewsletter">
+                                        <label for="shareNewsletter" class="mx-2">Desejo receber notícias, informações e descontos sobre a <a href="">&copy; Empresa</a> no meu e-mail.</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-lg btn-primary w-75 mt-3">Finalizar Compra</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <header></header>
+        <footer></footer>
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha512-UDJtJXfzfsiPPgnI5S1000FPLBHMhvzAMX15I+qG2E2OAzC9P1JzUwJOfnypXiOH7MRPaqzhPbBGDNNj7zBfoA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flexibility/2.0.1/flexibility.js" integrity="sha512-RShXKLsEuWDEo16rDAnxSEE3ZsCb9fH6/khyQqoFN3h6fybkaIb4EW5DTqQNNkCG7SsWGPtiU8dppBdFxeC/gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="../static/js/smoothscrolling.js"></script>
+        <script src="../static/js/scrollheader.js"></script>
+        <script src="../static/js/charcount.js"></script>
+        <script src="../static/js/headerhover.js"></script>
+        <script src="../static/js/headerselected.js"></script>
+        <script src="../static/js/radiotabs.js"></script>
+    </body>
+</html>
