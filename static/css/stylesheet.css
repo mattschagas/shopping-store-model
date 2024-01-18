@@ -31,12 +31,28 @@
     filter: brightness(0.65);
 }
 
+.txt-white{
+    color: white;
+}
+
+a.txt-white:hover{
+    color: lightgrey;
+}
+
 .txt-selected{
     filter: brightness(1.2);
 }
 
 .txt-bold{
     font-weight: bold;
+}
+
+.black{
+    filter: brightness(0);
+}
+
+.white{
+    filter: sepia(1) brightness(1);
 }
 
 .bg-cprimary{
@@ -141,7 +157,6 @@
     max-width: 80%;
 }
 
-
 .checkoutProcess{
     --load: 60%;
     width: 100%;
@@ -149,4 +164,23 @@
     background: linear-gradient(to right, rgb(94, 148, 250) 0%, rgb(94, 148, 250) var(--load), gray var(--load), gray 100%);
     mask: url("../imgs/process.png") no-repeat center;
     mask-size: contain;
+}
+
+.whitelogo{
+    background-color: white;
+    mask: url("../imgs/rubber-duck.png") no-repeat center;
+    mask-size: contain;
+}
+
+.headerfont {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 550;
+    font-style: normal;
+    font-size: x-large;
+}
+
+.expose-list::-webkit-scrollbar{
+    scrollbar-width: 0;
+    scroll-margin: 0;
+    scroll-padding: 0;
 }
