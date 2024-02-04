@@ -89,78 +89,23 @@
                         <div id="prodbyCategory" class="carousel slide w-100" data-bs-ride="carousel">
                             <div class="carousel-inner w-100">
                                 <div class="carousel-item active w-100" data-bs-interval="3000">
+                                    {% for categoria in categorias %}
                                     <div class="d-flex flex-row  justify-content-evenly w-100">
                                         <div class="card border border-0">
                                             <a href="#" class="card-body text-decoration-none">
                                                 <div class="d-flex justify-content-center w-100">
                                                     <div class="position-relative d-inline">
-                                                        <img src="../static/imgs/unsplash-4.jpg" class="card-img-top object-fit-cover rounded-circle" style="width: 10rem; height: 10rem; min-width: 100px; max-width: 15vw; min-height: 100px; max-height: 15vw;" alt="">
-                                                        <span class="position-absolute p-2 badge translate-middle-x bg-danger rounded-pill d-none d-sm-flex" style="top: 5%; left: 90%;">ATÉ -10% OFF</span>
+                                                        <img src="../{{ categoria.imagem }}" class="card-img-top object-fit-cover rounded-circle" style="width: 10rem; height: 10rem; min-width: 100px; max-width: 15vw; min-height: 100px; max-height: 15vw;" alt="">
+                                                        {% if categoria.desconto %}
+                                                        <span class="position-absolute p-2 badge translate-middle-x bg-danger rounded-pill d-none d-sm-flex" style="top: 5%; left: 90%;">ATÉ -{{ categoria.valor_desconto}}% OFF</span>
+                                                        {% endif %}
                                                     </div>
                                                 </div>
-                                                <h3 class="card-title text-center text-truncate">Brincos</h3>
-                                            </a>
-                                        </div>
-                                        <div class="card border border-0">
-                                            <a href="#" class="card-body text-decoration-none">
-                                                <div class="d-flex justify-content-center w-100">
-                                                    <div class="position-relative d-inline">
-                                                        <img src="../static/imgs/unsplash-5.jpg" class="card-img-top object-fit-cover rounded-circle" style="width: 10rem; height: 10rem; min-width: 100px; max-width: 15vw; min-height: 100px; max-height: 15vw;" alt="">
-                                                        <span class="position-absolute p-2 badge translate-middle-x bg-danger rounded-pill d-none d-sm-flex" style="top: 5%; left: 90%;">ATÉ -5% OFF</span>
-                                                    </div>
-                                                </div>
-                                                <h3 class="card-title text-center text-truncate">Vasos</h3>
-                                            </a>
-                                        </div>
-                                        <div class="card border border-0">
-                                            <a href="#" class="card-body text-decoration-none">
-                                                <div class="d-flex justify-content-center w-100">
-                                                    <div class="position-relative d-inline">
-                                                        <img src="../static/imgs/unsplash-6.jpg" class="card-img-top object-fit-cover rounded-circle" style="width: 10rem; height: 10rem; min-width: 100px; max-width: 15vw; min-height: 100px; max-height: 15vw;" alt="">
-                                                        <span class="position-absolute p-2 badge translate-middle-x bg-danger rounded-pill d-none d-sm-flex" style="top: 5%; left: 90%;">ATÉ -5% OFF</span>
-                                                    </div>
-                                                </div>
-                                                <h3 class="card-title text-center text-truncate">Mobília</h3>
+                                                <h3 class="card-title text-center text-truncate">{{ categoria.categoria }}</h3>
                                             </a>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="carousel-item w-100" data-bs-interval="3000">
-                                    <div class="d-flex flex-row justify-content-evenly w-100">
-                                        <div class="card border border-0">
-                                            <a href="#" class="card-body text-decoration-none">
-                                                <div class="d-flex justify-content-center w-100">
-                                                    <div class="position-relative d-inline">
-                                                        <img src="../static/imgs/unsplash-7.jpg" class="card-img-top object-fit-cover rounded-circle" style="width: 10rem; height: 10rem; min-width: 100px; max-width: 15vw; min-height: 100px; max-height: 15vw;" alt="">
-                                                        <span class="position-absolute p-2 badge translate-middle-x bg-danger rounded-pill d-none d-sm-flex" style="top: 5%; left: 90%;">ATÉ -20% OFF</span>
-                                                    </div>
-                                                </div>
-                                                <h3 class="card-title text-center text-truncate">Fones</h3>
-                                            </a>
-                                        </div>
-                                        <div class="card border border-0">
-                                            <a href="#" class="card-body text-decoration-none">
-                                                <div class="d-flex justify-content-center w-100">
-                                                    <div class="position-relative d-inline">
-                                                        <img src="../static/imgs/unsplash-8.jpg" class="card-img-top object-fit-cover rounded-circle" style="width: 10rem; height: 10rem; min-width: 100px; max-width: 15vw; min-height: 100px; max-height: 15vw;" alt="">
-                                                        <span class="position-absolute p-2 badge translate-middle-x bg-danger rounded-pill visually-hidden" style="top: 5%; left: 90%;">ATÉ -5% OFF</span>
-                                                    </div>
-                                                </div>
-                                                <h3 class="card-title text-center text-truncate">Automobilismo</h3>
-                                            </a>
-                                        </div>
-                                        <div class="card border border-0">
-                                            <a href="#" class="card-body text-decoration-none">
-                                                <div class="d-flex justify-content-center w-100">
-                                                    <div class="position-relative d-inline">
-                                                        <img src="../static/imgs/unsplash-9.jpg" class="card-img-top object-fit-cover rounded-circle" style="width: 10rem; height: 10rem; min-width: 100px; max-width: 15vw; min-height: 100px; max-height: 15vw;" alt="">
-                                                        <span class="position-absolute p-2 badge translate-middle-x bg-danger rounded-pill d-none d-sm-flex" style="top: 5%; left: 90%;">ATÉ -5% OFF</span>
-                                                    </div>
-                                                </div>
-                                                <h3 class="card-title text-center text-truncate">Tênis</h3>
-                                            </a>
-                                        </div>                                        
-                                    </div>
+                                    {% endfor %}
                                 </div>
                             </div>
                             <button class="carousel-control-prev d-none d-sm-flex" type="button" data-bs-target="#prodbyCategory" data-bs-slide="prev" style="width: 5%;">
@@ -180,95 +125,18 @@
                 <!-- Products in Promotion -->
                 <h3 class="display-6 ms-4">Produtos em Promoção</h3>
                 <div class="d-flex flex-nowrap overflow-x-auto position-relative expose-list mx-5" id="promoteProducts">
-                    <a href="./product.html" class="expose-item position-relative mx-2 border border-light rounded overflow-hidden text-dark text-decoration-none" style="min-width: 14rem; max-height: 20rem;">
-                        <span class="badge rounded-pill bg-danger top-0 right-0 m-2 position-absolute">-10% OFF</span>
-                        <img src="../static/imgs/unsplash-10.jpg" alt="" class="img-fluid object-fit-cover w-100 overflow-hidden" style="max-height: 10rem;">
-                        <div class="px-2 py-2">
-                            <h5 class="text-truncate">Produto1</h5>
-                            <h4><del class="text-muted">R$22,25</del> R$ 20,00</h4>
-                            <p class="text-wrap text-truncate" style="width: 100%;">Brief description of the product and others</p>
-                        </div>
-                    </a>
+                    {% for produtoDesconto in produtosComDescontos%}
                     <span class="p-1"></span>
                     <a href="./product.html" class="expose-item position-relative mx-2 border border-light rounded overflow-hidden text-dark text-decoration-none" style="min-width: 14rem; max-height: 20rem;">
-                        <span class="badge rounded-pill bg-danger top-0 right-0 m-2 position-absolute">-8% OFF</span>
-                        <img src="../static/imgs/unsplash-11.jpg" alt="" class="img-fluid object-fit-cover w-100" style="max-height: 10rem;">
+                        <span class="badge rounded-pill bg-danger top-0 right-0 m-2 position-absolute">-{{ produtoDesconto.valor_desconto }}% OFF</span>
+                        <img src="../{{ produtoDesconto.imagem }}" alt="" class="img-fluid object-fit-cover w-100" style="max-height: 10rem;">
                         <div class="px-2 py-2">
-                            <h5 class="text-truncate">Produto2</h5>
+                            <h5 class="text-truncate">{{ produtoDesconto.produto }}</h5>
                             <h4><del class="text-muted">R$22,25</del> R$ 30,00</h4>
-                            <p class="text-wrap text-truncate" style="width: 100%;">Brief description of the product and others</p>
+                            <p class="text-wrap text-truncate" style="width: 100%;">{{ produtoDesconto.descricao }}</p>
                         </div>
                     </a>
-                    <span class="p-1"></span>
-                    <a href="./product.html" class="expose-item position-relative mx-2 border border-light rounded overflow-hidden text-dark text-decoration-none" style="min-width: 14rem; max-height: 20rem;">
-                        <span class="badge rounded-pill bg-danger top-0 right-0 m-2 position-absolute">-3% OFF</span>
-                        <img src="../static/imgs/unsplash-12.jpg" alt="" class="img-fluid object-fit-cover w-100" style="max-height: 10rem;">
-                        <div class="px-2 py-2">
-                            <h5 class="text-truncate">Produto3</h5>
-                            <h4><del class="text-muted">R$22,25</del> R$ 40,00</h4>
-                            <p class="text-wrap text-truncate" style="width: 100%;">Brief description of the product and others</p>
-                        </div>
-                    </a>
-                    <span class="p-1"></span>
-                    <a href="./product.html" class="expose-item position-relative mx-2 border border-light rounded overflow-hidden text-dark text-decoration-none" style="min-width: 14rem; max-height: 20rem;">
-                        <span class="badge rounded-pill bg-danger top-0 right-0 m-2 position-absolute">-18% OFF</span>
-                        <img src="../static/imgs/unsplash-13.jpg" alt="" class="img-fluid object-fit-cover w-100" style="max-height: 10rem;">
-                        <div class="px-2 py-2">
-                            <h5 class="text-truncate">Produto4</h5>
-                            <h4><del class="text-muted">R$22,25</del> R$ 50,00</h4>
-                            <p class="text-wrap text-truncate" style="width: 100%;">Brief description of the product and others</p>
-                        </div>
-                    </a>
-                    <span class="p-1"></span>
-                    <a href="./product.html" class="expose-item position-relative mx-2 border border-light rounded overflow-hidden text-dark text-decoration-none" style="min-width: 14rem; max-height: 20rem;">
-                        <span class="badge rounded-pill bg-danger top-0 right-0 m-2 position-absolute">-30% OFF</span>
-                        <img src="../static/imgs/unsplash-14.jpg" alt="" class="img-fluid object-fit-cover w-100" style="max-height: 10rem;">
-                        <div class="px-2 py-2">
-                            <h5 class="text-truncate">Produto5</h5>
-                            <h4><del class="text-muted">R$22,25</del> R$ 60,00</h4>
-                            <p class="text-wrap text-truncate" style="width: 100%;">Brief description of the product and others</p>
-                        </div>
-                    </a>
-                    <span class="p-1"></span>
-                    <a href="./product.html" class="expose-item position-relative mx-2 border border-light rounded overflow-hidden text-dark text-decoration-none" style="min-width: 14rem; max-height: 20rem;">
-                        <span class="badge rounded-pill bg-danger top-0 right-0 m-2 position-absolute">-40% OFF</span>
-                        <img src="../static/imgs/unsplash-4.jpg" alt="" class="img-fluid object-fit-cover w-100" style="max-height: 10rem;">
-                        <div class="px-2 py-2">
-                            <h5 class="text-truncate">Produto6</h5>
-                            <h4><del class="text-muted">R$22,25</del> R$ 70,00</h4>
-                            <p class="text-wrap text-truncate" style="width: 100%;">Brief description of the product and others</p>
-                        </div>
-                    </a>
-                    <span class="p-1"></span>
-                    <a href="./product.html" class="expose-item position-relative mx-2 border border-light rounded overflow-hidden text-dark text-decoration-none" style="min-width: 14rem; max-height: 20rem;">
-                        <span class="badge rounded-pill bg-danger top-0 right-0 m-2 position-absolute">-15% OFF</span>
-                        <img src="../static/imgs/unsplash-5.jpg" alt="" class="img-fluid object-fit-cover w-100" style="max-height: 10rem;">
-                        <div class="px-2 py-2">
-                            <h5 class="text-truncate">Produto7</h5>
-                            <h4><del class="text-muted">R$22,25</del> R$ 80,00</h4>
-                            <p class="text-wrap text-truncate" style="width: 100%;">Brief description of the product and others</p>
-                        </div>
-                    </a>
-                    <span class="p-1"></span>
-                    <a href="./product.html" class="expose-item position-relative mx-2 border border-light rounded overflow-hidden text-dark text-decoration-none" style="min-width: 14rem; max-height: 20rem;">
-                        <span class="badge rounded-pill bg-danger top-0 right-0 m-2 position-absolute">-5% OFF</span>
-                        <img src="../static/imgs/unsplash-6.jpg" alt="" class="img-fluid object-fit-cover w-100" style="max-height: 10rem;">
-                        <div class="px-2 py-2">
-                            <h5 class="text-truncate">Produto8</h5>
-                            <h4><del class="text-muted">R$22,25</del> R$ 90,00</h4>
-                            <p class="text-wrap text-truncate" style="width: 100%;">Brief description of the product and others</p>
-                        </div>
-                    </a>
-                    <span class="p-1"></span>
-                    <a href="./product.html" class="expose-item position-relative mx-2 border border-light rounded overflow-hidden text-dark text-decoration-none" style="min-width: 14rem; max-height: 20rem;">
-                        <span class="badge rounded-pill bg-danger top-0 right-0 m-2 position-absolute">-20% OFF</span>
-                        <img src="../static/imgs/unsplash-7.jpg" alt="" class="img-fluid object-fit-cover w-100" style="max-height: 10rem;">
-                        <div class="px-2 py-2">
-                            <h5 class="text-truncate">Produto9</h5>
-                            <h4><del class="text-muted">R$22,25</del> R$ 190,00</h4>
-                            <p class="text-wrap text-truncate" style="width: 100%;">Brief description of the product and others</p>
-                        </div>
-                    </a>
+                    {% endfor %}
                 </div>
                 <a href="#promoteProducts" role="button" class="navSlide bakSlide position-absolute top-50 start-0 translate-middle-y"><i class="fa-solid fa-chevron-left mx-3"></i></a>
                 <a href="#promoteProducts" role="button" class="navSlide nxtSlide position-absolute top-50 end-0 translate-middle-y"><i class="fa-solid fa-chevron-right mx-3"></i></a>
